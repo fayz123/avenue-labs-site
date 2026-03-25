@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(magick identify:*)"
+      "Bash(magick identify:*)",
+      "Bash(magick /Users/fayzeenali/avenue-labs-site/public/logo.png -gravity center -background transparent -extent 442x442 -resize 512x512 /Users/fayzeenali/avenue-labs-site/public/favicon.png)"
     ]
   }
 }

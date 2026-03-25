@@ -367,6 +367,115 @@ function StatBand() {
   )
 }
 
+// ─── Claude Education ─────────────────────────────────────────────────────────
+const claudeCards = [
+  {
+    id: '01',
+    title: 'What is Claude?',
+    body: 'Claude is a family of AI models built by Anthropic — one of the world\'s leading AI safety companies. Unlike general-purpose chatbots, Claude is designed for nuanced reasoning, long-form analysis, and reliable behaviour in high-stakes enterprise environments.',
+  },
+  {
+    id: '02',
+    title: 'The Model Family',
+    body: 'Claude ships in three tiers: Opus for frontier-level reasoning on complex tasks, Sonnet for the best balance of capability and speed, and Haiku for lightweight, high-volume use cases. Each tier is accessible via the same API — you choose the right tool for each job.',
+  },
+  {
+    id: '03',
+    title: 'Why It Performs Differently',
+    body: 'Claude is trained with Constitutional AI — a framework where the model\'s values are shaped by a set of explicit principles, not just human feedback alone. This makes Claude more consistent, less prone to manipulation, and significantly easier to trust in production.',
+  },
+  {
+    id: '04',
+    title: 'Built for Long Context',
+    body: 'Claude supports up to 200,000 tokens of context — roughly 500 pages of text in a single request. This unlocks use cases that other models simply can\'t handle: full codebase analysis, large document review, and multi-turn workflows with deep memory.',
+  },
+  {
+    id: '05',
+    title: 'Tool Use & Agents',
+    body: 'Claude can call external tools, query databases, browse internal systems, and chain multi-step actions autonomously. This is the foundation for real AI agents — systems that don\'t just respond, but act on your behalf inside your existing infrastructure.',
+  },
+  {
+    id: '06',
+    title: 'Enterprise API',
+    body: 'The Anthropic API provides prompt caching (dramatically reducing cost on repeated context), batch processing for high-volume workloads, and fine-grained usage controls for compliance. It is the same API Avenue Labs uses in every engagement.',
+  },
+]
+
+function ClaudeEducation() {
+  return (
+    <section style={{ background: SLATE, padding: '7rem 2rem' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+
+        <div style={{ marginBottom: '4.5rem', maxWidth: 640 }}>
+          <SectionLabel>Claude Explained</SectionLabel>
+          <h2 style={{
+            color: NAVY,
+            fontSize: 'clamp(1.9rem, 3.5vw, 2.8rem)',
+            fontWeight: 300,
+            margin: 0,
+            letterSpacing: '-0.02em',
+          }}>
+            What You Should Know{' '}
+            <strong style={{ fontWeight: 700 }}>Before You Build</strong>
+          </h2>
+          <hr style={rule} />
+          <p style={{ color: BODY, fontSize: '0.95rem', lineHeight: 1.8, margin: 0 }}>
+            Claude is not just another language model. Understanding how it works —
+            and how it differs — is the first step to using it well in production.
+          </p>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '1px',
+          background: 'rgba(26,54,93,0.07)',
+        }}>
+          {claudeCards.map((c) => (
+            <div key={c.id} style={{
+              background: WHITE,
+              padding: '2.25rem',
+              transition: 'background 0.2s',
+            }}
+              onMouseEnter={e => e.currentTarget.style.background = '#F8FAFC'}
+              onMouseLeave={e => e.currentTarget.style.background = WHITE}
+            >
+              <div style={{
+                fontFamily: 'JetBrains Mono, monospace',
+                fontSize: '0.65rem',
+                fontWeight: 700,
+                color: CYAN_D,
+                letterSpacing: '0.08em',
+                marginBottom: '0.85rem',
+              }}>
+                {c.id}
+              </div>
+              <h3 style={{
+                color: NAVY,
+                fontSize: '1.05rem',
+                fontWeight: 700,
+                margin: '0 0 0.7rem',
+                letterSpacing: '-0.01em',
+              }}>
+                {c.title}
+              </h3>
+              <p style={{
+                color: BODY,
+                fontSize: '0.875rem',
+                lineHeight: 1.85,
+                margin: 0,
+              }}>
+                {c.body}
+              </p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  )
+}
+
 // ─── Horizon ──────────────────────────────────────────────────────────────────
 function Horizon() {
   const areas = [
@@ -500,6 +609,7 @@ export default function App() {
         <Hero />
         <Methodology />
         <StatBand />
+        <ClaudeEducation />
         <Horizon />
       </main>
       <Footer />
