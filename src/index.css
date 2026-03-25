@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1a365d;
+  --color-navy-dark: #0f1f38;
+  --color-navy-mid: #162d52;
+  --color-gold: #D4AF37;
+  --color-gold-hover: #e8c84a;
+  --color-gold-muted: rgba(212, 175, 55, 0.15);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #1a365d;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  #root {
+    width: 100%;
+    max-width: 100%;
+  }
+}
