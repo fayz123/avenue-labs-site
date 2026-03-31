@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logoUrl from '/logo.png'
 
 // ─── Color tokens ────────────────────────────────────────────────────────────
@@ -70,8 +71,8 @@ function Nav() {
         justifyContent: 'space-between',
       }}>
         <img src={logoUrl} alt="Avenue Labs" style={{ height: 62, objectFit: 'contain' }} />
-        <a
-          href="mailto:hello@avenue.so"
+        <Link
+          to="/contact"
           style={{
             background: NAVY,
             color: WHITE,
@@ -88,7 +89,7 @@ function Nav() {
           onMouseLeave={e => e.target.style.background = NAVY}
         >
           Inquire
-        </a>
+        </Link>
       </div>
     </nav>
   )
@@ -165,8 +166,8 @@ function Hero() {
           products with confidence, security, and scale.
         </p>
 
-        <a
-          href="mailto:hello@avenue.so"
+        <Link
+          to="/contact"
           style={{
             display: 'inline-block',
             background: CYAN,
@@ -184,7 +185,7 @@ function Hero() {
           onMouseLeave={e => e.target.style.background = CYAN}
         >
           Inquire for Implementation →
-        </a>
+        </Link>
 
         <p style={{
           marginTop: '1.5rem',
